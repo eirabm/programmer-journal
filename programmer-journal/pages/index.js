@@ -1,39 +1,37 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import {db} from '../firebase'
-import Navbar from '../components/navbar'
 
 const Home = (props) => {
   const router = useRouter()
-  const [data, setData] = useState([])
+  const [docs, setDocs] = useState([])
 
   useEffect(() => {
     if (!props.user) {
       router.push('/login')
       return
     }
-    
+
     db.collection(props.user.uid)
     .get()
       .then((snapshot) => {
-        snapshot.docs.forEach((doc) => setData([...data, doc.data()]))
+        snapshot.docs.forEach((doc) => setDocs((prevDocs) => [...prevDocs, doc.data()])
+        )
       })
 
   }, [props.user])
 
-  
-
-
     const addproject = () => {
-        
+      router.push('/projects')
     }
+
+    console.log(docs)
 
     return ( 
         <>
-        <Navbar user={props.user}/>
         <h1>Home</h1>
-        {data && data.map((project) => (
-          <div className="projectPreview">
+        {docs && docs.map((project) => (
+          <div className="projectPreview" key={docs.id}>
             <h1>{project.name}</h1>
             <p>{project.description}</p>
           </div>

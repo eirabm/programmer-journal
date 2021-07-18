@@ -1,0 +1,20 @@
+.asideMenu{
+    width: 300px;
+	float: left;
+	margin-top: -8px;
+	position: absolute;
+	height: 100%;
+	background-color: #2e3440;
+    right: 0;
+	position: fixed;
+	padding: 80px 0 150px 50px;
+
+	ul li{
+		margin-bottom: 20px;
+		padding: 10px;
+		color: #adadad;
+		top: 10px;
+		right: 15px;
+		cursor: pointer;
+	}
+}

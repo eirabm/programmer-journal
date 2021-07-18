@@ -1,0 +1,51 @@
+.navBar{
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+    background-color: #2e3440;
+    height: 50px;
+
+    .logo{
+        float: left;
+        height: 20px; 
+
+        img{
+            width: 100%;
+            max-width: 200px; 
+            margin-top: 10px;  
+            margin-left: 42px; 
+        }
+    }
+    
+    nav{
+        position: relative;
+        float: right;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bold;
+
+        ul{
+            margin-top: 0%;
+
+            li{
+                display: inline-block;
+                padding-left: 15px;
+                padding-right: 20px;
+
+                p{
+                    display: inline-block;
+                    color: #e5e9f0;
+                }
+            }
+            button{
+                background-color: #ebcb8b;            ;
+                border-radius: 4px;
+                margin: 10px;
+                padding: 4px;
+    
+                &:hover{
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}

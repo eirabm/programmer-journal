@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { auth } from '../firebase'
 import '../styles/globals.css'
+import Template from '../components/Template/Template'
 
 function MyApp({ Component, pageProps }) {
 
@@ -18,7 +19,12 @@ function MyApp({ Component, pageProps }) {
     })
   }, [])
 
-  return <Component {...pageProps} user={user}/>
+  return (
+  
+  <Template >
+  <Component {...pageProps} user={user}/>
+  </ Template>
+  )
 }
 
 export default MyApp
