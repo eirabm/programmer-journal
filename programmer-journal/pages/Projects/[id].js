@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ProjectsPage from ".";
 
-const OpenProject = () => {
+const OpenProject = (props) => {
     const router = useRouter()
 
     return ( 

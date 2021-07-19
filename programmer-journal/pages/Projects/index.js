@@ -1,9 +1,7 @@
 import SideMenu from "../../components/Aside/sideMenu";
 
 const ProjectsPage = (props) => {
-
-    console.log(props.doc, props.user)
-
+    console.log(props)
     return ( 
         <>
         <SideMenu doc={props.doc}/>
