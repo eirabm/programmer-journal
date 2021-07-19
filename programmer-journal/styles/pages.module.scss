@@ -1,0 +1,50 @@
+.pageContainer{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+	background-color: #eee;
+	border-radius: 10px;
+	box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
+	margin: 20px;
+	padding: 20px;
+	text-align: center;
+    width: 300px;
+
+    .info {
+        border-bottom: 2px solid gray;
+    }
+
+    .name{
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    .open{
+        color: #88c0d0;        ;
+    }
+  }
+
+  button{
+      background-color: #b48ead;
+      margin:20px;
+      padding:10px;
+      border-radius: 8px;
+      border:none;
+      box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
+      
+      &:hover{
+          cursor: pointer;
+      }
+    }
+
+    .editorCont {
+        width: 600px;
+    }
+}
